@@ -18,6 +18,20 @@ CS 342
 
 		Information Systems - The process of and tools for storing, managing, using and gathering of data and communications in an organization.
 
+	b.  
+		Database systems possess different techniques that distinguish them both from data structures and algorithms and the traditional file systems. Databases are organized as a single respository of information that is only defined once. This respository allows users to access the data in various ways, such as constructing, manipulating, and sharing the database.
+
+	c.
+		The stakeholders of database systems are database administrators, database designers, end users, tool developers, system designers, and application programmers.
+
+2.
+	a.
+		Data models organize different types of databases into different categories so stakeholders can better understand them. Figure 2.1 is showing a relational data model.
+
 	b.
+		The three-schema architecture is designed to separate the user application from the physical database. The first level, the internal level, has an internal scheme which describes the physical storage structure of the database. The second level, the conceptual level, has a conceptual schema, which describes the structure of the whole database for a community of users. The last level, the external or view level, includes a number of external schemas. Each external schema describes the part of the database that a particular group is interested in and hides the rest of the database from that user group.
+
+	c. A web-based information system will typically use the three-tier architecture, which adds an intermediate layer between the client and the database server. The intermediate layer is called the application server or the Web server, and it is used to execute programs.
+
 
 		
