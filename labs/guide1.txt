@@ -1,0 +1,23 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS 342
+3 February 2017
+
+									Guide 1
+
+1.
+
+	a. 
+
+		Data - Known facts that can be recorded and that have implicit meaning.
+
+		Database - A collection of related data.
+
+		Database Management System - A computerized system that enables users 
+		to create and maintain a database.
+
+		Information Systems - The process of and tools for storing, managing, using and gathering of data and communications in an organization.
+
+	b.
+
+		
