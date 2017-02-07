@@ -1,0 +1,26 @@
+1a. E.F. Codd invented the relational data model. He did most of his work at IBM in the 1960's and 1970's.
+
+1b.
+	i. Relation - a set of n-tuples
+
+	ii. Attribute - the name of a role played by some domain in the relation schema of a database.
+
+	iii. Domain - data type that describes the types of values that can appear in an attribute.
+
+	iv. n-tuple - an ordered list of n values where each value is an element of the domain or a special NULL value.
+
+	v. NULL value - A special indicator in SQL to specify that a specific data value does not exist in the database.
+
+	vi. primary key - a relational database table column designated to uniquely identify all table records.
+
+	foreign key - a field in one table that uniquely identifies a row of another or the same table.
+
+	candidate key - a column that can uniquely identify any database record without referencing other data
+
+	super key - a set of of attributes where there are no two distinct tuples that have the same values for all relations assigned to that variable
+
+	vii. referenced and referencing record - a record that is referenced with a foreign key by another record.
+
+1c. Depending on the needs and structure of the database, tuples can either be ordered or unordered.
+
+1d. You cannot have multiple values for the same attribute. You have to represent them with separate relations.
