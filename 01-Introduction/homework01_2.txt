@@ -1,0 +1,26 @@
+2.13).
+
+Family Extended Database Schema
+
+Individuals
+IndividualID, FamilyID, firstName, lastName, sex, birthDate, birthPlace
+
+Families
+FamilyID, HeadOfFamilyIndividualID, familyName, familyDescription, familyCountry
+
+Relationships
+RelationshipID, FamilyID, IndividualOneID, IndividualTwoID, RelationshipTypeCode, IndividualOneRoleCode, IndividualTwoRoleCode, relationshipStartDate, RelationshipEndDate, RelationshipPlace
+
+Relationship_Types
+RelationshipTypeCode, relationshipTypeDescription, isMarried, hasMarriedCousins, isParent, isChild
+
+Roles
+RoleCode, roleDescription, isFather, isMother, isSon, isDaughter, isHusband, isWife
+
+
+
+Different users:
+
+One user could be individual who is a father, who is married, and has a relationship with another individual who is a mother, she is married, and they are both part of the same family.
+Another user could be a daughter who is a child and has a platonic relationship with her brother and they are both part of the same family.
+Another user could just be an individual who is a part of a family but is not married to anyone.
