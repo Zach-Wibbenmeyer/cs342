@@ -1,0 +1,7 @@
+1.14)
+
+    a). The columns that would need to change would be STUDENT.Major, COURSE.Course_number, COURSE.Department, SECTION.Course_number, PREREQUISITE.Course_number, and PREREQUISITE.Prerequisite_number.
+
+    b). If SECTION.Course_number, Prerequisite.Course_number, and PREREQUISITE.Prerequisite_number each referred to unique IDs within the COURSE table,
+        then COURSE.Course_number and STUDENT.Major would be the only two columns that would need to be updated. I am not quite sure how to restructure the
+        schema so that only one column would need updating.
