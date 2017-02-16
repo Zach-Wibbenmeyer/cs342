@@ -1,0 +1,7 @@
+I would love to do something along the lines of a database for a local concert venue (i.e. The Orbit Room, The Intersection,
+The Pyramid Scheme, or 20 Monroe Live). I think this might be possible because you have to keep track of what bands are playing
+what night and which venue, you have to keep track of how many tickets you sell... you should also have a table for your staff.
+However, I wanted to see what you thought about this because initially I wasn't sure if it was a good idea...
+
+-- Some stakeholders for the database would be the concert-goers, promoters who are bringing in the bands,
+the staff working at the venue, the bands and their crew...
