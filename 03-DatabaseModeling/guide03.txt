@@ -1,0 +1,40 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Databases Administration
+
+Guide 03
+
+1).
+	a).
+		Software Design Practices:
+			- Determine the requirements for the stakeholders
+			- Use a UML diagram to design the application
+			- Implement the application
+
+		Database Design Practices:
+			- Requirements collection and analysis: Determine data requirements and functional requirements.
+			- Conceptual Design: Design a high-level conceptual schema.
+			- Logical Design: Design a database schema in the implementation data model of the Database Management System.
+			- Physical Design: Implement the storage structure, file organization, indexes, etc.
+
+		Yes, agile modeling practices are applicable to database design.
+
+	b).
+		- Entities: Objects in the real world that exist independently.
+		- Relationships: Refers to another entity instead of being an independent description.
+			- Cardinality Constraint: Maximum number of relationships an entity can be in.
+			- Participation Constraint: Minimum number of relationships an entity can be in.
+		- Attributes: Properties that describe an entity.
+			- Simple: Atomic; Can't be divided into smaller parts.
+			- Composite: Can be divided into smaller parts. These are a mix of attributes that together constitute as an attribute.
+			- Multi-valued: Attributes that are not limited to a single value at a time.
+			- Derived: Attribute that can be determined from other attributes.
+
+	c).
+		- Weak Entities: Entities that lack key attributes of their own.
+		- Identifying Relationships: Relationship that relates a weak entity to its owner.
+
+	d). 
+
+2).
+	a). 
