@@ -34,7 +34,20 @@ Guide 03
 		- Weak Entities: Entities that lack key attributes of their own.
 		- Identifying Relationships: Relationship that relates a weak entity to its owner.
 
-	d). 
+	d). View ERDDiagramGuide03Question1D.jpg 
 
 2).
-	a). 
+	a).
+
+	Person(ID, firstName, middleName, lastName, sex, gender, birthDate, phone)
+	Household(ID, name, phone)
+	Church(ID, name, phone)
+	Address(addressNumber, street, zipcode, state, country)
+	PersonHousehold(personID, householdID)
+	ChurchAddress(churchID, addressID)
+
+	b).
+
+	Create a table that holds the attributes required for each class.
+	For each relationship, determine if join tables are necessary.
+	Create an API based upon these rules you have established.
