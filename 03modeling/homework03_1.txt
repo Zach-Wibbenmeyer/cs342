@@ -1,0 +1,17 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Homework 03
+
+1).
+	a).
+		A flight is a route that is traveled from point A to B. This route may have multiple stops or layovers in between.
+
+		A flight leg is each individual flight on the route from point A to B. There can be one to many flight legs for each flight.
+
+		A leg instance is a scheduled flight leg, which would be the actual plane that a person would take from one location to the next.
+		
+	b).
+		The dotted lines are unique identifiers for a weak entity.
+
+	c).
+		They did this so they could have each leg instance model a certain plane traveling from one location to another. Meaning, there are a total number of available seats for travelers.
