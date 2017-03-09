@@ -1,0 +1,49 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Homework 04
+
+1).
+	a).
+		I would say this relation is in 1NF, depending on how Author_name is used. It is definitely not in BCNF or 4NF.
+
+	b).
+		Book(ID (PK), bookTitle, bookTypeID (FK), publisherID (FK))
+		BookType(ID (PK), bookType, listPrice)
+		Author(ID (PK), authorName)
+		BookAuthor(authorID (FK), bookID (FK), authorDescription)
+		Publisher(ID (PK), publisherName)
+
+		Functional Dependencies:
+			bookID -> bookTypeID, publisherID
+			bookTypeID -> bookType, listPrice
+			authorID, bookID -> authorDescription
+			publisherID -> publisherName
+			authorID -> authorName
+
+		Multivalued Dependencies:
+			None
+
+2).
+	a).
+		Possible candidate keys:
+			Book_Name, Author, Edition, Year
+			Book_Name, Author, Edition
+			Book_Name, Author, Year
+
+	b).
+		It has said relation because if there is another author, then there must be an additional two rows instead of just one additional row in the relation.
+
+	c).
+		Book(ID (PK), name)
+		Author(ID (PK), authorName)
+		BookEdition(bookID (FK), edition, year)
+		BookAuthor(bookID (FK), authorID (FK))
+
+		Functional Dependencies:
+			bookID -> bookName
+			authorID -> authorName
+			bookID, edition -> year
+			edition -> year
+
+		Multivalued Dependencies:
+			None
