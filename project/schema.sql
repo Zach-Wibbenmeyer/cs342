@@ -4,7 +4,7 @@
 
 CREATE TABLE Venue (
 	ID integer PRIMARY KEY,
-	name varchar(32),
+	name varchar(64),
 	streetName varchar(64),
 	city varchar(32),
 	state varchar(2),
@@ -14,19 +14,19 @@ CREATE TABLE Venue (
 CREATE TABLE Room (
 	ID integer PRIMARY KEY,
 	venueID integer,
-	name varchar(32),
+	name varchar(64),
 	capacity integer,
-	ticketsRemaining integer DEFAULT capacity,
+	ticketsRemaining integer,
 	FOREIGN KEY (venueID) REFERENCES Venue(ID),
 	CONSTRAINT CHK_Room CHECK (ticketsRemaining <= capacity AND ticketsRemaining >= 0)
 );
 
 CREATE TABLE Band (
 	ID integer PRIMARY KEY,
-	name varchar(64),
+	name varchar(256),
 	hometownCity varchar(32),
-	hometownState,varchar(2),
-	genre varchar(16),
+	hometownState varchar(2),
+	genre varchar(32),
 	members integer,
 	inception integer,
 	albums integer,
@@ -38,9 +38,10 @@ CREATE TABLE BandBooking (
 	bandID integer,
 	roomID integer,
 	startDate date,
-	endDate date
+	endDate date,
 	FOREIGN KEY (bandID) REFERENCES Band(ID),
-	FOREIGN KEY (roomID) REFERENCES Room(ID)
+	FOREIGN KEY (roomID) REFERENCES Room(ID),
+	CONSTRAINT CHK_Band_Date CHECK (startDate < endDate)
 );
 
 CREATE TABLE Employee (
@@ -60,5 +61,6 @@ CREATE TABLE EmployeeBooking (
 	startDate date,
 	endDate date,
 	FOREIGN KEY (employeeID) REFERENCES Employee(ID),
-	FOREIGN KEY (roomID) REFERENCES Room(ID)
+	FOREIGN KEY (roomID) REFERENCES Room(ID),
+	CONSTRAINT CHK_Employee_Date CHECK (startDate < endDate)
 );
