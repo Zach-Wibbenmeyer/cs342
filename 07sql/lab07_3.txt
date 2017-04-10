@@ -1,0 +1,7 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Lab 07
+
+SELECT(firstname, lastname, birthdate = birthdate >= 1961 AND birthdate <= 1975)
+
+{p.firstName, p.lastName, p.birthdate | Person(p) AND p.birthdate >= 1961 and birthdate <= 1975}
