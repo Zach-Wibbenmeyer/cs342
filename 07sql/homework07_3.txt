@@ -1,0 +1,7 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Homework 07
+
+PI_E.id,E.firstname,E.lastname,E.hire_date,D.department_name(SIGMA_E.department_id=D.department_id(Employee(E) x Department(D)))
+
+{E.id,E.firstname,E.lastname,E.hire_date,D.department_name | Employee(E) ^ Department(D) ^ E.department_id = D.department_id}
