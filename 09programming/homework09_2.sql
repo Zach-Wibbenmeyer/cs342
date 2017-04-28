@@ -26,4 +26,6 @@ HAVING COUNT(*) > 200
 GROUP BY D.id, D.firstName, D.lastName
 ORDER BY COUNT(*) ASC;
 
+DROP INDEX homework09;
+
 -- Elapsed: 00:00:00.32
