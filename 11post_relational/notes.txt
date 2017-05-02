@@ -1,0 +1,36 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 Lab 11
+
+11.1).
+
+	c).
+		The Glassfish application server itself sits on the server side and is used in the J2EE edition.
+		JDK pertains more to J2SE, which is standard Java.
+	
+	d).
+		Runs at the client tier.
+	
+	e).
+		Uses the Glassfish server. The localhost utilized is a different number.
+	
+	f).
+		A WAR file is a is a JAR file used to distribute a collection of JavaServer Pages, Java Servlets, 
+		Java classes, XML files, tag libraries, static web pages (HTML and related files) 
+		and other resources that together constitute a web application.
+		
+	g). 
+		An exploded WAR file means that you point your application server at a folder containing the unzipped, or exploded, contents of what would
+		be inside of the WAR/EAR file. You do this instead of deploying it on the application server itself. A non-exploded WAR file is a file
+		that has not been unzipped yet.
+		
+	h). 
+		An EAR file is a standard JAR file with an .ear extension, with one or more entries that represent the modules of the application,
+		and a metadata directory called META-INF which contains one or more deployment descriptors. An EAR file can also contain a WAR file.
+		A WAR file may be digitally stamped in the same way as a JAR file in order to allow others to determine where the source code came from.
+		
+11.2).
+	
+	b).
+		GlassFish 4.1.0 - RESTful Web Service
+		
