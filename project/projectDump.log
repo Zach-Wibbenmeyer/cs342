@@ -1,0 +1,24 @@
+;;; 
+Export: Release 11.2.0.2.0 - Production on Wed May 3 21:06:20 2017
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+Starting "PROJECTDUMP"."SYS_EXPORT_TABLE_01":  projectDump/******** parfile=projectDump.par 
+Estimate in progress using BLOCKS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 384 KB
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+. . exported "PROJECTDUMP"."BAND"                        11.45 KB      50 rows
+. . exported "PROJECTDUMP"."BANDBOOKING"                 7.507 KB      50 rows
+. . exported "PROJECTDUMP"."EMPLOYEE"                    11.24 KB      50 rows
+. . exported "PROJECTDUMP"."EMPLOYEEBOOKING"             7.460 KB      48 rows
+. . exported "PROJECTDUMP"."ROOM"                        8.484 KB      48 rows
+. . exported "PROJECTDUMP"."VENUE"                       10.38 KB      49 rows
+Master table "PROJECTDUMP"."SYS_EXPORT_TABLE_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for PROJECTDUMP.SYS_EXPORT_TABLE_01 is:
+  C:\USERS\ZDW3\DOCUMENTS\PROJECT\PROJECTDUMP.DMP
+Job "PROJECTDUMP"."SYS_EXPORT_TABLE_01" successfully completed at 21:06:23

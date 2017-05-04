@@ -1,0 +1,4 @@
+DIRECTORY=exp_dir
+DUMPFILE=projectDump.dmp 
+LOGFILE=projectDump.log
+TABLES=projectDump.Venue, projectDump.Room, projectDump.Band, projectDump.BandBooking, projectDump.Employee, projectDump.EmployeeBooking

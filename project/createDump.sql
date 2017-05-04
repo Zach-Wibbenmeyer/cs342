@@ -1,0 +1,24 @@
+-- Zach Wibbenmeyer
+-- Professor Vanderlinden
+-- CS342
+
+-- Create the user
+DROP USER projectDump CASCADE;
+
+CREATE USER projectDump 
+	IDENTIFIED BY bjarne
+	QUOTA 5M ON System;
+GRANT
+	CONNECT,
+	CREATE SESSION, 
+	CREATE TABLE, 
+	CREATE VIEW,
+	CREATE MATERIALIZED VIEW, 
+	CREATE TRIGGER,
+	CREATE PROCEDURE, 
+	UNLIMITED TABLESPACE, 
+	CREATE SEQUENCE TO projectDump;
+
+DROP DIRECTORY exp_dir;
+CREATE DIRECTORY exp_dir AS 'C:\Users\zdw3\Documents\project';
+GRANT READ, WRITE ON DIRECTORY exp_dir TO projectDump;
