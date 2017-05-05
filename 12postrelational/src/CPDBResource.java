@@ -1,12 +1,10 @@
+import models.HouseholdEntity;
 import models.PersonEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -65,6 +63,67 @@ public class CPDBResource {
     @Produces(MediaType.APPLICATION_JSON)
     public List<PersonEntity> getPeople() {
         return em.createQuery(em.getCriteriaBuilder().createQuery(PersonEntity.class)).getResultList();
+    }
+
+    /**
+     * deletePerson() - deletes a person from the database
+     *
+     * @param id The id of the person to delete
+     * @return String
+     */
+    @DELETE
+    @Path("person/{id}")
+    public String deletePerson(@PathParam("id") long id) {
+        PersonEntity person = em.find(PersonEntity.class, id);
+
+        if (person != null) {
+            em.remove(person);
+            return "You just removed a person";
+        }
+        return "I could not find that specified person";
+    }
+
+
+    /**
+     * updatePerson() - updates a person in the database
+     *
+     *
+     * @param id - id of the person to update
+     * @param information - JSON representing PersonEntity
+     * @return PersonEntity
+     */
+    @PUT
+    @Path("person/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public PersonEntity updatePerson(@PathParam("id") long id, PersonEntity information) {
+        information.setId(id);
+        PersonEntity person = em.find(PersonEntity.class, id);
+
+        if (person != null) {
+            information.setHousehold(em.find(HouseholdEntity.class, information.getHousehold()));
+            return em.merge(information);
+        }
+
+        return null;
+    }
+
+    /**
+     * addPerson() - add a person to the database
+     *
+     * @param person - PersonEntity class
+     * @return a String
+     */
+    @POST
+    @Path("people")
+    public String addPerson(PersonEntity person) {
+        try {
+            person.setHousehold(em.find(HouseholdEntity.class, person.getHouseholdId()));
+            em.persist(person);
+        } catch (Exception e) {
+            return "Something went wrong..." + e.getMessage();
+        }
+        return "Person was successfully added";
     }
 
 }

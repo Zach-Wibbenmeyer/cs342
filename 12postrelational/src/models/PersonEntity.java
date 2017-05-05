@@ -31,6 +31,9 @@ public class PersonEntity {
             inverseJoinColumns = @JoinColumn(name = "TEAMNAME", referencedColumnName = "NAME", nullable = false))
     private List<TeamEntity> teams;
 
+    @Transient
+    private long householdId;
+
     public HouseholdEntity getHousehold() { return household; }
 
     public void setHousehold( HouseholdEntity h) { this.household = h; }
@@ -38,6 +41,10 @@ public class PersonEntity {
     public List<TeamEntity> getTeams() { return teams; }
 
     public void setTeams( List<TeamEntity> t ) { this.teams = t; }
+
+    public long getHouseholdId() { return householdId; }
+
+    public void setHouseholdId() { this.householdId = householdId; }
 
     @Id
     @Column(name = "ID")
