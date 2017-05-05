@@ -17,6 +17,7 @@
         <setting name="provider-name" value="EclipseLink" />
         <datasource-mapping>
           <factory-entry name="NewPersistenceUnit" value="6eb22d3d-6f8d-4c4b-873e-6a4f43c9f69c" />
+          <factory-entry name="cpdbEntities" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
