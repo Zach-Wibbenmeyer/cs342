@@ -1,0 +1,38 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS 342 - Lab 12
+
+12.1).
+	
+	1).
+		The database connection built in guide 12 is a connection between the IDE and the database. This connection allows the IDE to depict a better version
+		of schemas and tables than sqlplus. The database connection built by GlassFish is the connection that the running application will utilize to access 
+		the data via the application server. The other connection is only available to the IDE during development, while this connection is available anytime
+		the GlassFish server is running.
+		
+12.2).
+
+	1).
+		It created a Java object for each table that we generated a mapping for.
+		
+	2).
+		The PersonTeamEntityPK is an object that represents a mapping of a person to a team. The PK is at tne end because it uses the primary keys for mapping.
+		
+	3).
+		IntelliJ defaults to property access, because, by default, it generates getter and setter methods for each of the instance variables.
+		
+12.3).
+
+	1).
+		Yes. It converts the object into a JSON object so that the object can be understood by anything the technology at the receiving end is and any language it was written in.
+		
+	2).
+		Yes it does. The EntityManager is injected into the CPDBResource class so it can access the entities stored by the EntityManager.
+		
+	3).
+		The Entity Manager is used to access the java objects that are stored in the database.
+		
+12.4).
+
+	1).
+		It returns them as a JSON object inside of the Person JSON object.
