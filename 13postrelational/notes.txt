@@ -1,0 +1,30 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Lab 13
+
+13.1)
+
+	a).
+		store.put() stores a new record as the given key-value pair in a non-relational database.
+		em.persist() stores a new record in a relational database.
+
+	b).
+		myHashTable.put() inserts a new key-value pair into a hash table, but the hash table does not have to be a non-relational database.
+		It only stores the object for the time the program runs.
+
+13.2).
+
+	a).
+		KVLite keys are strings that point to a certain record or field. It is also hierarchical, which means that the record and field map up directly.
+		A relational database uses a unique key to identify a record, but it does not use a hierarchy, and it also does not include keys to
+		get the fields in the records.
+
+13.3)
+	
+	a). 
+		A record on the many side of the join table would contain a key-value pair, like a movie having "movie/15486/-/director" -> "director/7894".
+		The key is a normal field on the movie record, and the value is a key for a director record.
+
+	b).
+		This would be helpful if you possess a person object and the person object may or may not have an unknown nickname. If the nickname
+		is known, then the key "person/<id>/-/nickname" would point to "<nickname>". Otherwise, if the nickname was unkown, then the empty value would be used.
