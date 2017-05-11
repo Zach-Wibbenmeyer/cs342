@@ -1,0 +1,12 @@
+SELECT rank FROM Movie WHERE id = 238071;
+
+-- Gets the Ocean's 11 movie's rank, which is 8.5
+
+UPDATE Movie SET rank = 8.7 WHERE id = 238071;
+
+-- Adds 0.2 to the Ocean's 11 record's rank
+
+SELECT rank FROM Movie WHERE id = 238071;
+
+-- We expect to see 8.7
+-- The actual result depends on which thread runs its update second, which causes the  first's update to be lost (lost update problem).

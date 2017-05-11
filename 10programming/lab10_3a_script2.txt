@@ -1,0 +1,21 @@
+LOCK TABLE Movie IN EXCLUSIVE MODE;
+
+-- Lock the table so that no other threads can perform DDL commands on it until a commit or rollback is performed in this thread.
+-- If another thread has already locked the table then this will wait for it to be released, unless NOWAIT is specified.
+
+SELECT rank FROM Movie WHERE id = 238071;
+
+-- Gets the Ocean's 11 movie's rank, which is 8.5
+
+UPDATE Movie SET rank = 8.7 WHERE id = 238071;
+
+-- Adds 0.2 to the Ocean's 11 record's rank
+
+SELECT rank FROM Movie WHERE id = 238071;
+
+-- We expect to see 8.7
+
+COMMIT;
+
+-- Commit the changes and release the lock. Rollback would also release the lock, but only after rolling back all the changes.
+-- Until this point, the other thread can only see the value of the movie's rank from before this one had updated it, and it is not able to perform any DDL commands on the Movie table.

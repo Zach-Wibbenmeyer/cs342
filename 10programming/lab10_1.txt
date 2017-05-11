@@ -1,0 +1,21 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Lab 10
+
+What I think will happen:
+
+Query the movie table -> the two sessions will return the same result set.
+Delete a movie and query the table -> the session which did not do the delete will not reflect the change.
+Rollback and query -> both sessions will return the original result set.
+Add a new movie and query -> the session which did not do the insert will not have the change.
+Commit -> both sessions will be identical and reflect the changes, and each one will contain the newly added movie.
+
+
+a).
+	Oracle seems to utilize a session as a pseudo-transaction. Meaning, you are able to commit
+	or rollback during the session to commit or drop changes that were made in the session so that the other
+	sessions will begin to use the updated data.
+
+b).
+	Yes, you can. We did not create savepoints, but those would work similarily to commits, but would not end the current session.
+	Therefore, we can implement these transaction properties inside of a session.
