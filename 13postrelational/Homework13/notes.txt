@@ -1,0 +1,21 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS342 - Homework 13
+
+2).
+
+	a).
+		KVLite is a Key-Value NoSQL database.
+		
+	b).
+		I would use a Graph system since each of the individual nodes are pretty small objects
+		but there are a lot of relationships of different types between all of them.
+		
+	c).
+		Yes I can. However, I would not recommend doing it because it is both memory expensive
+		and computationally expensive.
+	
+	d).
+		Since there is no schema in this homework, you can pretty much insert any key-value pair anywhere you wish,
+		and there is no way for the computer to verify what is correct. A schema is usually set in place to provide structure,
+		so the user cannot enter anything he/she wishes and get away with it.
