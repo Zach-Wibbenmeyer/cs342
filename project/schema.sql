@@ -41,6 +41,7 @@ CREATE TABLE BandBooking (
 	endDate date,
 	FOREIGN KEY (bandID) REFERENCES Band(ID),
 	FOREIGN KEY (roomID) REFERENCES Room(ID),
+	PRIMARY KEY (bandID, roomID),
 	CONSTRAINT CHK_Band_Date CHECK (startDate < endDate)
 );
 
@@ -62,5 +63,6 @@ CREATE TABLE EmployeeBooking (
 	endDate date,
 	FOREIGN KEY (employeeID) REFERENCES Employee(ID),
 	FOREIGN KEY (roomID) REFERENCES Room(ID),
+	PRIMARY KEY (employeeID, roomID),
 	CONSTRAINT CHK_Employee_Date CHECK (startDate < endDate)
 );
