@@ -13,10 +13,10 @@ CREATE TABLE Venue (
 
 CREATE TABLE Room (
 	ID integer PRIMARY KEY,
-	venueID integer,
 	name varchar(64),
 	capacity integer,
 	ticketsRemaining integer,
+	venueID integer,
 	FOREIGN KEY (venueID) REFERENCES Venue(ID),
 	CONSTRAINT CHK_Room CHECK (ticketsRemaining <= capacity AND ticketsRemaining >= 0)
 );
