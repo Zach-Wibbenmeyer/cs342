@@ -1,0 +1,21 @@
+Zach Wibbenmeyer
+Professor Vanderlinden
+CS 342 - Project 5
+
+I implemented the Venue, Room, and Band tables for this part of the project.
+For the most part, KVLite is not a great source for implemented my data, mostly because it
+can be done much simpler with a SQL database implemented. It was extremely painful trying to get this to work...
+
+The queries I implemented:
+
+1).
+	GetVenueRooms: This is a two table join between the Venue and Room tables. This can be useful
+	for promoters or employees who are looking to schedule their band or worker, but do not know which rooms
+	are in which venues. This useful two table join will display cleanly all of the rooms in each venue, given what the user enters.
+	
+2).
+	GetSortedInceptionOfBands: This is an ordered list that displays all of the bands
+	in the database from earliest inception to most recent inception. Although this may have
+	no real important use, I thought it would be a fun list to do if you wanted to impress your friends
+	with your band knowledge, or, if you were at a concert and the band on state said "Yo dudes, we're totally
+	going to give a free CD to anyone who can guess what year we started playing! We promise!".
