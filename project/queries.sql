@@ -23,6 +23,7 @@ ORDER BY V.ID ASC;
  * This query is good for quickly viewing the main basic information about bands in the database
  * creates a view
  * The same view can be created for employees as well
+ * Demonstrates a view
  */
 CREATE OR REPLACE VIEW MainBandInformation AS
 	SELECT B.ID, B.name, B.hometownCity, B.hometownState, B.genre
@@ -72,7 +73,29 @@ SELECT B.ID || ' ' || B.name AS Band, BB.startDate || ' ' || BB.endDate AS Dates
 FROM Band B
 	INNER JOIN BandBooking BB ON B.ID = BB.bandID
 	INNER JOIN Room R ON BB.roomID = R.ID;
+	
+
+/*
+ * This query is important for displaying which employees have not been specified an end date yet.
+ * Often times employers will schedule their employees and not tell them the exact date they stop until a few days before.
+ * This demonstrates handling NULL values
+ */
+	
+SELECT E.firstName || ' ' || E.lastName AS Employee_Name
+FROM Employee E
+	INNER JOIN EmployeeBooking EB ON E.ID = EB.employeeID
+WHERE EB.endDate IS NULL;
 
 
-
-
+/*
+ * This query is important for joining together the bands who may possibly have NULL start dates who are playing in each room
+ * Displays the amount of tickets each band has sold in the room they are playing in
+ * Demonstrates aggregation by grouping
+ * Inner/Outer join
+ */
+SELECT SUM(R.capacity) - SUM(R.ticketsRemaining) AS Tickets_Sold, B.ID AS Band
+FROM Room R
+	RIGHT OUTER JOIN BandBooking BB ON R.ID = BB.roomID
+	INNER JOIN Band B ON BB.bandID = B.ID
+GROUP BY B.ID
+ORDER BY Band;
