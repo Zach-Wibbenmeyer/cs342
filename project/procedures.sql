@@ -4,6 +4,9 @@
 
 SET SERVEROUTPUT ON;
 
+/*
+ * AddRoomToVenue - Basic procedure that adds another room to a venue
+ */
 CREATE OR REPLACE PROCEDURE AddRoomToVenue (room_id INTEGER, venue_id INTEGER, room_name VARCHAR, room_capacity INTEGER, tickets_remaining INTEGER) AS
 	exist INTEGER := 0;
 BEGIN
