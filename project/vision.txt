@@ -5,3 +5,8 @@ However, I wanted to see what you thought about this because initially I wasn't 
 
 -- Some stakeholders for the database would be the concert-goers, promoters who are bringing in the bands,
 the staff working at the venue, the bands and their crew...
+
+Update:
+
+I kept the same mindset as above, but instead of doing a database for one concert venue, I expanded it into a database keeping track of multiple concert venues,
+the rooms inside those venues, which bands were playing which rooms, and which employees were assigned to which rooms.
