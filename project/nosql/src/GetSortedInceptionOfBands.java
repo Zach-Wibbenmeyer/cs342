@@ -1,16 +1,22 @@
 import oracle.kv.*;
 
 import javax.xml.crypto.dsig.keyinfo.KeyValue;
+import java.sql.SQLException;
 import java.util.*;
 
 /**
- * Created by zdw3 on 5/16/2017.
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project 5
+ * GetSortedInceptionofBands - Main class for retrieving a list of bands sorted by their inception date
  */
 public class GetSortedInceptionOfBands {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         KVStore store = KVStoreFactory.getStore(new KVStoreConfig("kvstore", "localhost:5000"));
+
+        LoadProjectDB.load(store);
 
         sortInceptionOfBands(store);
 
@@ -68,7 +74,7 @@ public class GetSortedInceptionOfBands {
      * getNameOfBand() - gets the name of the band
      * @param bandId
      * @param store
-     * @return
+     * @return a String
      */
     private static String getNameOfBand(String bandId, KVStore store) {
         String temp = "";

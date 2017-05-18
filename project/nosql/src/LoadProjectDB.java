@@ -8,7 +8,40 @@ import java.util.*;
  * Zach Wibbenmeyer
  * Professor Vanderlinden
  * CS342 - Project 5
- * NoSQL part of project
+ * LoadProjectDB - Main class for loading all of the tables
+ */
+
+/**
+ * Key Value Structure
+ *
+ * Venue table:
+ *
+ * /venue/{ID}/-/name/{name}
+ * /venue/{ID}/-/streetName/{streetName}
+ * /venue/{ID}/-/city/{city}
+ * /venue/{ID}/-/state/{state}
+ * /venue/{ID}/-/zipcode/{zipcode}
+ *
+ *
+ *
+ * Room table:
+ *
+ * /room/{ID}/-/name/{name}
+ * /room/{ID}/-/capacity/{capacity}
+ * /room/{ID}/-/ticketsRemaining/{capacity}
+ * /room/{ID}/-/venueID/{venueID}
+ *
+ *
+ *
+ * Band table:
+ *
+ * /band/{ID}-/name/{name}
+ * /band/{ID}-/hometownCity/{hometownCity}
+ * /band/{ID}-/hometownState/{hometownState}
+ * /band/{ID}-/genre/{genre}
+ * /band/{ID}-/members/{members}
+ * /band/{ID}-/inception/{inception}
+ * /band/{ID}-/albums/{albums}
  */
 
 public class LoadProjectDB {

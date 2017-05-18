@@ -5,6 +5,13 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project 5
+ * GetVenueRooms - Main class for creating a two table join between the tables Venue and Room
+ */
+
 public class GetVenueRooms {
 
     // Main program

@@ -6,7 +6,10 @@ import java.util.Arrays;
 import java.util.Map;
 
 /**
- * Created by zdw3 on 5/16/2017.
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project 5
+ * Formulate - Main class for making key value pairs easy
  */
 
 /**
