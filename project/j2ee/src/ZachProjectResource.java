@@ -15,15 +15,12 @@ import java.util.List;
  * Zach Wibbenmeyer
  * Professor Vanderlinden
  * CS342 - Project 5
+ * ZachProjectResource - Main class that holds all of the web service requests
  */
 @Stateless
 @Path("/")
 public class ZachProjectResource {
 
-    /**
-     * JPA creates and maintains a managed entity manager with an integrated JTA that we can inject here.
-     *     E.g., http://wiki.eclipse.org/EclipseLink/Examples/REST/GettingStarted
-     */
     @PersistenceContext
     private EntityManager em;
 
@@ -40,10 +37,10 @@ public class ZachProjectResource {
     }
 
     /**
-     * GET an individual person record.
+     * GET an individual band record.
      *
-     * @param id the ID of the person to retrieve
-     * @return a person record
+     * @param id the ID of the band to retrieve
+     * @return a band record
      */
     @GET
     @Path("band/{id}")
@@ -53,10 +50,10 @@ public class ZachProjectResource {
     }
 
     /**
-     * GET an individual person record.
+     * GET an individual room record.
      *
-     * @param id the ID of the person to retrieve
-     * @return a person record
+     * @param id the ID of the room to retrieve
+     * @return a room record
      */
     @GET
     @Path("room/{id}")
@@ -67,10 +64,10 @@ public class ZachProjectResource {
 
 
     /**
-     * GET an individual person record.
+     * GET an individual employee record.
      *
-     * @param id the ID of the person to retrieve
-     * @return a person record
+     * @param id the ID of the employee to retrieve
+     * @return a employee record
      */
     @GET
     @Path("employee/{id}")
@@ -80,11 +77,9 @@ public class ZachProjectResource {
     }
 
     /**
-     * GET all people using the criteria query API.
-     * This could be refactored to use a JPQL query, but this entitymanager-based approach
-     * is consistent with the other handlers.
+     * GET all bands using the criteria query API.
      *
-     * @return a list of all person records
+     * @return a list of all band records
      */
     @GET
     @Path("bands")
@@ -94,11 +89,9 @@ public class ZachProjectResource {
     }
 
     /**
-     * GET all people using the criteria query API.
-     * This could be refactored to use a JPQL query, but this entitymanager-based approach
-     * is consistent with the other handlers.
+     * GET all employees using the criteria query API.
      *
-     * @return a list of all person records
+     * @return a list of all employee records
      */
     @GET
     @Path("employees")
@@ -108,11 +101,9 @@ public class ZachProjectResource {
     }
 
     /**
-     * GET all people using the criteria query API.
-     * This could be refactored to use a JPQL query, but this entitymanager-based approach
-     * is consistent with the other handlers.
+     * GET all rooms using the criteria query API.
      *
-     * @return a list of all person records
+     * @return a list of all room records
      */
     @GET
     @Path("rooms")
@@ -123,6 +114,8 @@ public class ZachProjectResource {
 
     /**
      * Delete an individual room record
+     *
+     * @return: an updated room record
      */
     @DELETE
     @Path("room/{id}")
@@ -138,6 +131,8 @@ public class ZachProjectResource {
 
     /**
      * PUT an indidual room record
+     *
+     * @return: an updated room record
      */
     @PUT
     @Path("room/{id}")
@@ -151,6 +146,8 @@ public class ZachProjectResource {
 
     /**
      * POST an individual room record
+     *
+     * @return: an updated room record
      */
     @POST
     @Path("rooms")

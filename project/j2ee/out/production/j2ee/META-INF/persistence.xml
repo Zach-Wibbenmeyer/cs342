@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="j2eeEntities" transaction-type="JTA">
+        <class>models.Band</class>
+        <class>models.Employee</class>
+        <class>models.Room</class>
+        <class>models.Venue</class>
+        <class>models.Bandbooking</class>
+        <class>models.Employeebooking</class>
+
+        <properties>
+            <property name="eclipselink.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/XE"/>
+            <property name="eclipselink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="eclipselink.jdbc.user" value="zachproject"/>
+            <property name="eclipselink.jdbc.password" value="fakedoorsdotcom35"/>
+        </properties>
+    </persistence-unit>
+</persistence>

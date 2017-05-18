@@ -3,7 +3,10 @@ package models;
 import javax.persistence.*;
 
 /**
- * Created by zdw3 on 5/15/2017.
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project
+ * Main class for the Venue table
  */
 @Entity
 @Table(name = "VENUE", schema = "ZACHPROJECT", catalog = "")

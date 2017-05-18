@@ -9,8 +9,8 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>memory</secret-storage>
       <user-name>zachproject</user-name>
-      <introspection-scope>*:ZACHPROJECT,PUBLIC,SYS,SYSTEM</introspection-scope>
-      <resolve-scope>*:ZACHPROJECT,PUBLIC</resolve-scope>
+      <introspection-scope>*:PUBLIC,SYS,SYSTEM,ZACHPROJECT</introspection-scope>
+      <resolve-scope>*:PUBLIC,ZACHPROJECT</resolve-scope>
     </data-source>
   </component>
 </project>

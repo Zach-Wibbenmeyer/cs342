@@ -4,7 +4,10 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by zdw3 on 5/15/2017.
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project
+ * Main class for the Room table
  */
 @Entity
 @Table(name = "ROOM", schema = "ZACHPROJECT", catalog = "")
@@ -17,12 +20,13 @@ public class Room {
 //    private List<Room> employeeRoom;
 //    private List<Room> bandRoom;
 
-
+    // Joining the Room and Venue table
     @ManyToOne
     @JoinColumn(name = "VENUEID", referencedColumnName = "ID")
 
     private Venue venue;
 
+    // Joining the BandBooking, Band, and Room tables
     @ManyToMany
     @JoinTable(name = "BANDBOOKING", schema = "ZACHPROJECT",
             joinColumns = @JoinColumn(name = "BANDID", referencedColumnName = "ID", nullable = false),

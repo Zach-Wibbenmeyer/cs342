@@ -5,7 +5,10 @@ import java.sql.Time;
 import java.util.List;
 
 /**
- * Created by zdw3 on 5/15/2017.
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project
+ * Main class for the Employee table
  */
 @Entity
 @Table(name = "EMPLOYEE", schema = "ZACHPROJECT")

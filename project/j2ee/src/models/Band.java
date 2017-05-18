@@ -4,7 +4,10 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by zdw3 on 5/15/2017.
+ * Zach Wibbenmeyer
+ * Professor Vanderlinden
+ * CS342 - Project
+ * Main class for the Band table
  */
 @Entity
 @Table(name = "BAND", schema = "ZACHPROJECT", catalog = "")
